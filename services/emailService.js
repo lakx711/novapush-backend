@@ -5,20 +5,32 @@ let transporter
 let sendGridConfigured = false
 
 // Initialize SendGrid if API key is available
-if (process.env.SENDGRID_API_KEY) {
-  try {
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY)
-    sendGridConfigured = true
-    console.log('✓ SendGrid email service configured')
-  } catch (error) {
-    console.error('SendGrid configuration failed:', error.message)
+function initializeSendGrid() {
+  if (process.env.SENDGRID_API_KEY) {
+    try {
+      sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+      sendGridConfigured = true
+      console.log('✓ SendGrid email service configured')
+      return true
+    } catch (error) {
+      console.error('SendGrid configuration failed:', error.message)
+      sendGridConfigured = false
+      return false
+    }
+  } else {
+    console.log('⚠️ SENDGRID_API_KEY not found - SendGrid not configured')
+    return false
   }
 }
 
+// Initialize on module load
+initializeSendGrid()
+
 export function getEmailTransporter() {
   if (transporter) return transporter
+  
   if (!process.env.SMTP_HOST && !process.env.SMTP_USER) {
-    throw new Error('Email service not configured')
+    return null // No SMTP configured
   }
   
   // Gmail-specific configuration (fallback)
@@ -45,7 +57,12 @@ export function getEmailTransporter() {
 }
 
 export async function sendEmail({ to, subject, html }) {
-  const from = process.env.EMAIL_FROM || process.env.SMTP_USER || 'noreply@novapush.app'
+  const from = process.env.EMAIL_FROM || 'noreply@novapush.app'
+  
+  // Re-initialize SendGrid if not configured
+  if (!sendGridConfigured) {
+    initializeSendGrid()
+  }
   
   // Try SendGrid first (more reliable)
   if (sendGridConfigured) {
@@ -66,16 +83,21 @@ export async function sendEmail({ to, subject, html }) {
       return { messageId }
     } catch (error) {
       console.error(`✗ [SendGrid] Failed:`, error.message)
-      // If SendGrid fails, fall through to SMTP
+      console.error('SendGrid error details:', error.response?.body || error)
+      // Continue to SMTP fallback
     }
   }
   
   // Fallback to Gmail SMTP
+  const transporter = getEmailTransporter()
+  if (!transporter) {
+    throw new Error('Email service not configured - Neither SendGrid nor SMTP is available')
+  }
+  
   try {
     console.log(`[SMTP] Attempting to send email to ${to}...`)
     
-    const t = getEmailTransporter()
-    const info = await t.sendMail({ 
+    const info = await transporter.sendMail({ 
       from, 
       to, 
       subject, 
@@ -90,16 +112,6 @@ export async function sendEmail({ to, subject, html }) {
     return { messageId: info.messageId }
   } catch (error) {
     console.error(`✗ [SMTP] Email sending failed to ${to}:`, error.message)
-    
-    // Provide more specific error messages
-    if (error.message.includes('timeout')) {
-      throw new Error('Email service timeout - Configure SendGrid API key for reliable delivery')
-    } else if (error.message.includes('authentication')) {
-      throw new Error('Email authentication failed - Check SMTP credentials or use SendGrid')
-    } else if (error.message.includes('ECONNREFUSED')) {
-      throw new Error('Cannot connect to email server - Use SendGrid for better reliability')
-    } else {
-      throw new Error(`Email delivery failed: ${error.message}`)
-    }
+    throw new Error(`Email delivery failed: ${error.message}`)
   }
 }
