@@ -12,6 +12,7 @@ import templateRoutes from './routes/templateRoutes.js'
 import userRoutes from './routes/userRoutes.js'
 import notificationRoutes from './routes/notificationRoutes.js'
 import logRoutes from './routes/logRoutes.js'
+import otpRoutes from './routes/otpRoutes.js'
 
 dotenv.config()
 
@@ -40,6 +41,7 @@ app.get('/', (_req, res) => {
 
 // Routes
 app.use('/api/auth', authRoutes)
+app.use('/api/otp', otpRoutes)
 app.use('/api/templates', templateRoutes)
 app.use('/api/users', userRoutes)
 app.use('/api/notifications', notificationRoutes)
