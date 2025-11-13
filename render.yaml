@@ -1,0 +1,40 @@
+services:
+  - type: web
+    name: novapush-backend
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 4000
+      - key: MONGO_URI
+        value: mongodb+srv://username:password@cluster.mongodb.net/database?appName=App
+      - key: MONGO_DB
+        value: novapush
+      - key: JWT_SECRET
+        value: novapush_super_secret_jwt_key_2024_production_ready_secure
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      - key: CORS_ORIGIN
+        value: https://novapush-platform.netlify.app
+      - key: SENDGRID_API_KEY
+        value: your_sendgrid_api_key_here
+      - key: EMAIL_FROM
+        value: NovaPush <noreply@novapush.app>
+      - key: TWILIO_ACCOUNT_SID
+        value: ""
+      - key: TWILIO_AUTH_TOKEN
+        value: ""
+      - key: TWILIO_PHONE_NUMBER
+        value: ""
+      - key: VAPID_PUBLIC_KEY
+        value: ""
+      - key: VAPID_PRIVATE_KEY
+        value: ""
+      - key: VAPID_SUBJECT
+        value: mailto:noreply@novapush.app

@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "6910c851e721e4e2d30573a4",
+    "email": "lakshitsoni78@gmail.com",
+    "name": "lakshit",
+    "role": "user",
+    "createdAt": "2025-11-09T16:58:57.103Z",
+    "updatedAt": "2025-11-09T16:58:57.103Z",
+    "__v": 0
+  },
+  {
+    "_id": "6910c861e721e4e2d30573d6",
+    "email": "clashofclan19111@gmail.com",
+    "name": "Shubham",
+    "role": "user",
+    "createdAt": "2025-11-09T16:59:13.851Z",
+    "updatedAt": "2025-11-09T16:59:13.851Z",
+    "__v": 0
+  }
+]

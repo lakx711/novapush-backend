@@ -1,0 +1,311 @@
+[
+  {
+    "_id": "6910b0d05c429bfb057f6a6e",
+    "correlationId": "c994a017-76af-43b5-bbb8-269418209613",
+    "recipient": "lakshitsoni78@gmail.com",
+    "channel": "email",
+    "templateId": "6910b0c95c429bfb057f6a66",
+    "status": "failed",
+    "attempts": 0,
+    "timeline": [
+      {
+        "status": "queued",
+        "info": "Queued for sending",
+        "_id": "6910b0d05c429bfb057f6a6f",
+        "at": "2025-11-09T15:18:40.181Z"
+      },
+      {
+        "status": "sending",
+        "info": "Sending started",
+        "_id": "6910b0d05c429bfb057f6a71",
+        "at": "2025-11-09T15:18:40.185Z"
+      },
+      {
+        "status": "failed",
+        "info": "SMTP not configured",
+        "_id": "6910b0d05c429bfb057f6a74",
+        "at": "2025-11-09T15:18:40.188Z"
+      }
+    ],
+    "createdAt": "2025-11-09T15:18:40.182Z",
+    "updatedAt": "2025-11-09T15:18:40.188Z",
+    "__v": 0,
+    "error": "SMTP not configured"
+  },
+  {
+    "_id": "6910b2fc4fcbb0f6bf383b8c",
+    "correlationId": "9798619a-5815-4021-91bb-e239b9c26ae5",
+    "recipient": "lakshitsoni78@gmail.com",
+    "channel": "email",
+    "templateId": "6910b0c95c429bfb057f6a66",
+    "status": "failed",
+    "attempts": 3,
+    "timeline": [
+      {
+        "status": "queued",
+        "info": "Queued for sending",
+        "_id": "6910b2fc4fcbb0f6bf383b8d",
+        "at": "2025-11-09T15:27:56.874Z"
+      },
+      {
+        "status": "sending",
+        "info": "Attempt 1",
+        "_id": "6910b2fc4fcbb0f6bf383b8f",
+        "at": "2025-11-09T15:27:56.882Z"
+      },
+      {
+        "status": "failed",
+        "info": "Attempt 1 failed: SMTP not configured",
+        "_id": "6910b2fc4fcbb0f6bf383b92",
+        "at": "2025-11-09T15:27:56.884Z"
+      },
+      {
+        "status": "sending",
+        "info": "Attempt 2",
+        "_id": "6910b2fd4fcbb0f6bf383b97",
+        "at": "2025-11-09T15:27:57.394Z"
+      },
+      {
+        "status": "failed",
+        "info": "Attempt 2 failed: SMTP not configured",
+        "_id": "6910b2fd4fcbb0f6bf383b9c",
+        "at": "2025-11-09T15:27:57.396Z"
+      },
+      {
+        "status": "sending",
+        "info": "Attempt 3",
+        "_id": "6910b2fe4fcbb0f6bf383bb5",
+        "at": "2025-11-09T15:27:58.404Z"
+      },
+      {
+        "status": "failed",
+        "info": "Attempt 3 failed: SMTP not configured",
+        "_id": "6910b2fe4fcbb0f6bf383bbc",
+        "at": "2025-11-09T15:27:58.406Z"
+      }
+    ],
+    "createdAt": "2025-11-09T15:27:56.876Z",
+    "updatedAt": "2025-11-09T15:27:58.406Z",
+    "__v": 0,
+    "error": "SMTP not configured"
+  },
+  {
+    "_id": "6910c3623af90003a90b240d",
+    "correlationId": "f91f8d30-cf8d-4b68-87cd-ca5f0ccf3674",
+    "recipient": "lakshitsoni78@gmail.com",
+    "channel": "email",
+    "templateId": "6910b0c95c429bfb057f6a66",
+    "status": "failed",
+    "attempts": 3,
+    "timeline": [
+      {
+        "status": "queued",
+        "info": "Queued for sending",
+        "_id": "6910c3623af90003a90b240e",
+        "at": "2025-11-09T16:37:54.565Z"
+      },
+      {
+        "status": "sending",
+        "info": "Attempt 1",
+        "_id": "6910c3623af90003a90b2410",
+        "at": "2025-11-09T16:37:54.574Z"
+      },
+      {
+        "status": "failed",
+        "info": "Attempt 1 failed: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-7b0cc175d61sm8803497b3a.39 - gsmtp",
+        "_id": "6910c3643af90003a90b242d",
+        "at": "2025-11-09T16:37:56.945Z"
+      },
+      {
+        "status": "sending",
+        "info": "Attempt 2",
+        "_id": "6910c3653af90003a90b2432",
+        "at": "2025-11-09T16:37:57.451Z"
+      },
+      {
+        "status": "failed",
+        "info": "Attempt 2 failed: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-7b0c963613esm9207150b3a.1 - gsmtp",
+        "_id": "6910c3673af90003a90b2437",
+        "at": "2025-11-09T16:37:59.283Z"
+      },
+      {
+        "status": "sending",
+        "info": "Attempt 3",
+        "_id": "6910c3683af90003a90b243e",
+        "at": "2025-11-09T16:38:00.289Z"
+      },
+      {
+        "status": "failed",
+        "info": "Attempt 3 failed: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-341d11e2336sm6149587a91.1 - gsmtp",
+        "_id": "6910c36b3af90003a90b2445",
+        "at": "2025-11-09T16:38:03.132Z"
+      }
+    ],
+    "createdAt": "2025-11-09T16:37:54.568Z",
+    "updatedAt": "2025-11-09T16:38:03.132Z",
+    "__v": 0,
+    "error": "Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-341d11e2336sm6149587a91.1 - gsmtp"
+  },
+  {
+    "_id": "6910c869e721e4e2d30573e0",
+    "correlationId": "100d4661-111b-4d51-a112-e4ec150e834d",
+    "recipient": "clashofclan19111@gmail.com",
+    "channel": "email",
+    "templateId": "6910c5b5181925e74bd4bfe8",
+    "status": "failed",
+    "attempts": 3,
+    "timeline": [
+      {
+        "status": "queued",
+        "info": "Queued for sending",
+        "_id": "6910c869e721e4e2d30573e1",
+        "at": "2025-11-09T16:59:21.271Z"
+      },
+      {
+        "status": "sending",
+        "info": "Attempt 1",
+        "_id": "6910c869e721e4e2d30573e3",
+        "at": "2025-11-09T16:59:21.275Z"
+      },
+      {
+        "status": "failed",
+        "info": "Attempt 1 failed: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-29651c73382sm117780885ad.69 - gsmtp",
+        "_id": "6910c86be721e4e2d305740e",
+        "at": "2025-11-09T16:59:23.442Z"
+      },
+      {
+        "status": "sending",
+        "info": "Attempt 2",
+        "_id": "6910c86be721e4e2d3057413",
+        "at": "2025-11-09T16:59:23.952Z"
+      },
+      {
+        "status": "failed",
+        "info": "Attempt 2 failed: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-7b0c953de38sm9109894b3a.9 - gsmtp",
+        "_id": "6910c86de721e4e2d3057444",
+        "at": "2025-11-09T16:59:25.770Z"
+      },
+      {
+        "status": "sending",
+        "info": "Attempt 3",
+        "_id": "6910c86ee721e4e2d3057479",
+        "at": "2025-11-09T16:59:26.785Z"
+      },
+      {
+        "status": "failed",
+        "info": "Attempt 3 failed: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-34375e7537asm2395852a91.4 - gsmtp",
+        "_id": "6910c872e721e4e2d3057480",
+        "at": "2025-11-09T16:59:30.624Z"
+      }
+    ],
+    "createdAt": "2025-11-09T16:59:21.272Z",
+    "updatedAt": "2025-11-09T16:59:30.624Z",
+    "__v": 0,
+    "error": "Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-34375e7537asm2395852a91.4 - gsmtp"
+  },
+  {
+    "_id": "6910c9bc14165ef88ef5858e",
+    "correlationId": "999539c3-40fe-49f6-9bf5-b59c78d148dc",
+    "recipient": "clashofclan19111@gmail.com",
+    "channel": "email",
+    "templateId": "6910c5b5181925e74bd4bfe8",
+    "status": "sent",
+    "attempts": 1,
+    "timeline": [
+      {
+        "status": "queued",
+        "info": "Queued for sending",
+        "_id": "6910c9bc14165ef88ef5858f",
+        "at": "2025-11-09T17:05:00.633Z"
+      },
+      {
+        "status": "sending",
+        "info": "Attempt 1",
+        "_id": "6910c9bc14165ef88ef58591",
+        "at": "2025-11-09T17:05:00.642Z"
+      },
+      {
+        "status": "sent",
+        "info": "Attempt 1 succeeded",
+        "_id": "6910c9c014165ef88ef58603",
+        "at": "2025-11-09T17:05:04.515Z"
+      }
+    ],
+    "createdAt": "2025-11-09T17:05:00.636Z",
+    "updatedAt": "2025-11-09T17:05:04.515Z",
+    "__v": 0,
+    "payload": {
+      "messageId": "<76a5fea7-d48a-afda-da05-128f840fb117@gmail.com>"
+    }
+  },
+  {
+    "_id": "6910cafc7c5a039ff97d7f1a",
+    "correlationId": "9df8b4a7-8f82-4d96-bffb-037020d67156",
+    "recipient": "lakshitsoni78@gmail.com",
+    "channel": "email",
+    "templateId": "6910c5b5181925e74bd4bfe8",
+    "status": "sent",
+    "attempts": 1,
+    "timeline": [
+      {
+        "status": "queued",
+        "info": "Queued for sending",
+        "_id": "6910cafc7c5a039ff97d7f1b",
+        "at": "2025-11-09T17:10:20.387Z"
+      },
+      {
+        "status": "sending",
+        "info": "Attempt 1",
+        "_id": "6910cafc7c5a039ff97d7f1d",
+        "at": "2025-11-09T17:10:20.396Z"
+      },
+      {
+        "status": "sent",
+        "info": "Attempt 1 succeeded",
+        "_id": "6910cb007c5a039ff97d7f5f",
+        "at": "2025-11-09T17:10:24.807Z"
+      }
+    ],
+    "createdAt": "2025-11-09T17:10:20.390Z",
+    "updatedAt": "2025-11-09T17:10:24.807Z",
+    "__v": 0,
+    "payload": {
+      "messageId": "<f4a9b36c-8dd2-36f0-2df6-45bf859d46aa@gmail.com>"
+    }
+  },
+  {
+    "_id": "6910cd7bdf711b5b5f0d911e",
+    "correlationId": "26ebab97-15c4-45fc-8c81-7c793315c221",
+    "recipient": "lakshitsoni78@gmail.com",
+    "channel": "email",
+    "templateId": "6910cce8a612e73df2726577",
+    "status": "sent",
+    "attempts": 1,
+    "timeline": [
+      {
+        "status": "queued",
+        "info": "Queued for sending",
+        "_id": "6910cd7bdf711b5b5f0d911f",
+        "at": "2025-11-09T17:20:59.945Z"
+      },
+      {
+        "status": "sending",
+        "info": "Attempt 1",
+        "_id": "6910cd7bdf711b5b5f0d9121",
+        "at": "2025-11-09T17:20:59.952Z"
+      },
+      {
+        "status": "sent",
+        "info": "Attempt 1 succeeded",
+        "_id": "6910cd7fdf711b5b5f0d9169",
+        "at": "2025-11-09T17:21:03.801Z"
+      }
+    ],
+    "createdAt": "2025-11-09T17:20:59.947Z",
+    "updatedAt": "2025-11-09T17:21:03.801Z",
+    "__v": 0,
+    "payload": {
+      "messageId": "<3d480857-fd54-e1d6-0d59-793037248da4@gmail.com>"
+    }
+  }
+]

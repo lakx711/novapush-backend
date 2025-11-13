@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "6910c861e721e4e2d30573d8",
+    "userId": "6910c861e721e4e2d30573d6",
+    "channels": {
+      "email": true,
+      "sms": true,
+      "push": true
+    },
+    "quietHours": {
+      "enabled": false,
+      "start": "22:00",
+      "end": "08:00",
+      "timezone": "UTC"
+    },
+    "createdAt": "2025-11-09T16:59:13.853Z",
+    "updatedAt": "2025-11-09T16:59:13.853Z",
+    "__v": 0
+  }
+]
