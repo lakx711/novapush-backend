@@ -7,6 +7,7 @@ import dotenv from 'dotenv'
 import { Server as SocketIOServer } from 'socket.io'
 import { connectDB } from './config/db.js'
 import { seedDefaultTemplates } from './utils/seedTemplates.js'
+import { seedSampleLogs } from './utils/seedLogs.js'
 import authRoutes from './routes/authRoutes.js'
 import templateRoutes from './routes/templateRoutes.js'
 import userRoutes from './routes/userRoutes.js'
@@ -61,9 +62,18 @@ app.use((err, _req, res, _next) => {
 const PORT = process.env.PORT || 4000
 
 async function start() {
-  await connectDB()
-  await seedDefaultTemplates()
-  server.listen(PORT, () => console.log(`NovaPush API running on :${PORT}`))
+  try {
+    await connectDB()
+    await seedDefaultTemplates()
+    await seedSampleLogs()
+    
+    server.listen(PORT, () => {
+      console.log(`🚀 Server running on port ${PORT}`)
+    })
+  } catch (error) {
+    console.error('❌ Server startup failed:', error.message)
+    process.exit(1)
+  }
 }
 
 start().catch((e) => {
