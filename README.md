@@ -92,7 +92,7 @@ For complete API documentation, visit the deployed health endpoint or check the 
 
 ## 📄 License
 
-MIT License - see LICENSE file for details.
+MIT License - see LICENSE file for details
 
 ---
 
