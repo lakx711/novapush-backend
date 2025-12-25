@@ -40,7 +40,7 @@ A powerful Node.js/Express.js backend API for the NovaPush multi-channel notific
 - `GET /api/auth/profile` - Get user profile
 
 ### Notifications
-- `POST /api/notifications/email` - Send email
+- `POST /api/notifications/email` - Send emails
 - `POST /api/notifications/sms` - Send SMS
 - `POST /api/notifications/push` - Send push notification
 - `GET /api/notifications` - Get notification history
