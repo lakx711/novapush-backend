@@ -81,7 +81,7 @@ For complete API documentation, visit the deployed health endpoint or check the 
 - Rate limiting ready
 - Environment variable protection
 
-## 🚀 Deploy Now
+## 🚀 Deployment through render
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com)
 
